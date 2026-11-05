@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Détail du Professeur</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}" />
+<!-- <link rel="stylesheet" th:href="@{/css/styles.css}" /> -->
+</head>
+<body><main class="container">
+		<div class="row">
+			<div class="col-1">
+				<a th:href="@{/professeur/liste}"><i class="fa fa-chevron-left"></i></a>
+			</div>
+			<div class="col-11">
+				<h3 th:text="Détail +${professeur.username}">Titre</h3>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-4" th:text="#{professeur.username} ">Code</div>
+
+
+			<div class="col-8" th:text="${professeur.username}">Valeur</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-4" th:text="#{professeur.nom}">Nom</div>
+
+			<div class="col-8" th:text="${professeur.nom}">Valeur</div>
+
+		</div>
+		<div class="row">
+			<div class="col-4" th:text="#{professeur.prenom}">Prenom</div>
+
+			<div class="col-8" th:text="${professeur.prenom}">Valeur</div>
+
+		</div>
+		<div class="row">
+			<div class="col-4" th:text="#{professeur.email}">Email</div>
+
+			<div class="col-8" th:text="${professeur.email}">Valeur</div>
+		</div>
+	</main>
+	
+	
+	<footer>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col">
+					<p class="text-right" th:text="'&copy;'+ ISFCE">&copy;PID</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+<!-- 		<script th:src="@{/webjars/jquery/jquery.min.js}"></script> -->
+<!-- 		<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script> -->
+		<script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	
+</body>
+</html>
